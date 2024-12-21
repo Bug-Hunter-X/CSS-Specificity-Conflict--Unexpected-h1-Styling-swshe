@@ -1,0 +1,36 @@
+The solution involves increasing the specificity of the `.container h1` selector or using `!important` to override the general `h1` style, though the latter is less preferable for maintainability. Here's a solution using increased specificity:
+
+```css
+h1 {
+  color: blue;
+}
+
+.container h1 {
+  color: red !important; /* less preferrable solution */
+}
+
+.container {
+  background-color: yellow;
+}
+```
+
+Alternatively, a more robust approach is to make your selectors more specific.  For example:
+
+```css
+.container {
+  background-color: yellow;
+}
+
+.container h1 {
+  color: red;
+}
+
+#container h1 { /*If container is a div with id container*/
+    color: red;
+}
+
+h1 {
+  color: blue;
+}
+```
+This ensures that your desired styles are applied correctly without resorting to `!important`.
