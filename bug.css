@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates a common issue:  Specificity conflicts and unexpected cascading behavior. The goal is to style the h1 element within the '.container' class, but due to specificity rules, the general h1 style is overriding our intended style. 
+
+```css
+h1 {
+  color: blue;
+}
+
+.container h1 {
+  color: red;
+}
+
+.container {
+  background-color: yellow;
+}
+```
